@@ -13,7 +13,7 @@ import testBase.testBase;
 
 public class TC_002_LogIn extends testBase
 {
-	@Test
+	@Test(groups= {"sanity","master"})
 	public void testLogin() throws IOException
 	{
 		logger.info("Strating TC_002_LogIn.....");

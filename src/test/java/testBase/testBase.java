@@ -27,7 +27,7 @@ public class testBase {
 	public Logger logger; //logger file for logs
 	public ResourceBundle rb; //for properties file
 
-	@BeforeClass
+	@BeforeClass(groups= {"master","regression","sanity"})
 	@Parameters({"browser"})
 	public void setup(String br)
 	{
@@ -61,7 +61,7 @@ public class testBase {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
-	@AfterClass
+	@AfterClass(groups= {"master","regression","sanity"})
 	public void teardown()
 	{
 		driver.quit();

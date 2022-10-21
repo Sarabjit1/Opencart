@@ -11,7 +11,7 @@ import testBase.testBase;
 
 public class TC_001_AcoountRegistration extends testBase
 {	
-	@Test
+	@Test(groups= {"regression","master"})
 	public void test_account_registration() throws IOException
 	{
 		logger.info("Starting TC_001_AcoountRegistration");

@@ -7,34 +7,15 @@
   </listeners>
   <test name="Test">
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="master"/>
+      </run>
+    </groups>
     <classes>
       <class name="testCases.TC_001_AcoountRegistration"/>
       <class name="testCases.TC_002_LogIn"/>
       <class name="testCases.TC_003_LogInDDT"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="testCases.TC_002_LogIn">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.TC_002_LogIn -->
-      <class name="testCases.TC_003_LogInDDT">
-        <methods>
-          <include name="test_LogInDDT" invocation-numbers="3"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.TC_003_LogInDDT -->
-      <class name="testCases.TC_001_AcoountRegistration">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.TC_001_AcoountRegistration -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

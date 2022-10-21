@@ -11,10 +11,9 @@ import pageObjects.homePage;
 import testBase.testBase;
 import utilities.XLUtility;
 
-public class TC_003_LogInDDT extends testBase{
+public class TC_003_LogInDDT extends testBase{	
 	
-	
-	@Test(dataProvider="LoginData")
+	@Test(dataProvider="LoginData", groups= {"ddt"})
 	public void test_LogInDDT(String email,String pwd,String exp)
 	{
 		logger.info(" Starting TC_003_LoginDDT ");
